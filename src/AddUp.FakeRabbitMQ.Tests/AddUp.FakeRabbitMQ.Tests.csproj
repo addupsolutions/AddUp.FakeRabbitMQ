@@ -32,7 +32,7 @@
     depends on version 15 which is achingly slow!
     -->
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
-    <PackageReference Include="Microsoft.CodeCoverage" Version="17.4.0" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="17.4.1" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.50.0.58025">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
