@@ -40,6 +40,7 @@ namespace AddUp.RabbitMQ.Fakes
         public int ChannelNumber { get; }
         public IBasicConsumer DefaultConsumer { get; set; }
         public ulong NextPublishSeqNo { get; set; }
+        public string CurrentQueue { get; private set; }
         public TimeSpan ContinuationTimeout { get; set; }
         public ShutdownEventArgs CloseReason { get; private set; }
         public bool IsOpen => CloseReason == null;
@@ -401,6 +402,8 @@ namespace AddUp.RabbitMQ.Fakes
             // RabbitMQ automatically binds queues to the default exchange.
             // https://www.rabbitmq.com/tutorials/amqp-concepts.html#exchange-default
             QueueBind(q, "", q, null);
+
+            CurrentQueue = queue;
 
             return new QueueDeclareOk(q, 0, 0);
         }

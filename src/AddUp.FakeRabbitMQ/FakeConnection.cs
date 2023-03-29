@@ -30,6 +30,7 @@ namespace AddUp.RabbitMQ.Fakes
         public event EventHandler<ConnectionRecoveryErrorEventArgs> ConnectionRecoveryError;
         public event EventHandler<ConsumerTagChangedAfterRecoveryEventArgs> ConsumerTagChangeAfterRecovery;
         public event EventHandler<QueueNameChangedAfterRecoveryEventArgs> QueueNameChangeAfterRecovery;
+        public event EventHandler<RecoveringConsumerEventArgs> RecoveringConsumer;
 #pragma warning restore 67
 
         public string ClientProvidedName { get; }
